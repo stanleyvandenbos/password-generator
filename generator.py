@@ -12,9 +12,11 @@ symbols = string.punctuation
 
 # Questions
 while True:
+    
     try:
         length = int(input('Enter the length of your password: '))
         break
+
     except ValueError:
         print('\nThis is not a number. Try again...')
         continue
@@ -22,6 +24,7 @@ while True:
 print("\nSome websites don't allow symbols.")
 
 while True:
+
     use_symbols = input('Do you want to use symbols? (yes/no): ')
 
     if use_symbols.lower() in yes:
