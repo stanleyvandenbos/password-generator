@@ -1,4 +1,7 @@
 import random, string
+# Choises
+yes = ['yes', 'y']
+no = ['no', 'n']
 
 # Define data
 lower = string.ascii_lowercase
@@ -20,11 +23,11 @@ print("\nSome websites don't allow symbols.")
 while True:
     use_symbols = input('Do you want to use symbols? (yes/no): ')
 
-    if use_symbols == 'yes':
+    if use_symbols.lower() in yes:
         data = lower + upper + num + symbols
         break
 
-    elif use_symbols == 'no':
+    elif use_symbols.lower() in no:
         data = lower + upper + num
         break
 
