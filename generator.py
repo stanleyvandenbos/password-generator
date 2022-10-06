@@ -8,24 +8,36 @@ upper = string.ascii_uppercase
 num = string.digits
 symbols = string.punctuation
 
-# Settings
-length = int(input('\nEnter the length of your password: '))
+# Questions
+while True:
+    try:
+        length = int(input('Enter the length of your password: '))
+        break
+    except ValueError:
+        print('\nThis is not a number. Try again...')
+        continue
+
 print("\nSome websites don't allow symbols.")
-use_symbols = input('\nDo you want to use symbols? (yes/no): ')
 
-if use_symbols() == 'yes':
-    data = lower + upper + num + symbols
+while True:
+    use_symbols = input('Do you want to use symbols? (yes/no): ')
 
-elif use_symbols() == 'no':
-    data = lower + upper + num
+    if use_symbols == 'yes':
+        data = lower + upper + num + symbols
+        break
 
-else:
-    print('Type yes or no')
+    elif use_symbols == 'no':
+        data = lower + upper + num
+        break
+
+    else:
+        print('\nType yes or no...')
+        continue
 
 # Use random
-temp = random.sample(all,length)
+temp = random.sample(data,length)
 
 # Generate password
 password = "".join(temp)
 
-print(password)
+print('\nPassword:\n' + password)
