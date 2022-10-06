@@ -1,2 +1,2 @@
-# simple-password-generator
-Simple Password Generator
+# Password Generator
+- This tool generates passwords
