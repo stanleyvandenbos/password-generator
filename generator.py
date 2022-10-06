@@ -1,5 +1,3 @@
-from http.client import TEMPORARY_REDIRECT
-import numbers
 import random, string
 
 # Define data
