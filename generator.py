@@ -1,4 +1,5 @@
 import random, string
+
 # Choises
 yes = ['yes', 'y']
 no = ['no', 'n']
